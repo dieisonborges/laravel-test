@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Produtos</title>
-</head>
-<body>
+@extends('layouts.app')
+@section('title','Produtos')
+@section('content')
+
 	<h1>Produtos</h1>
 	<ul>
 		@foreach ($produtos as $produto)
@@ -15,5 +13,4 @@
 		@endforeach
 	</ul>
 
-</body>
-</html>
+@endsection
