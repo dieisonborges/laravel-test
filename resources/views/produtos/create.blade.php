@@ -15,11 +15,8 @@
 		<label>Quantidade</label>
 		<input type="number" name="quantidade">
 
-		<input type="submit" name="Enviar">
+		<input type="submit" value="Enviar">
 	</form>
-
-
-
 
 	
 <br><br>

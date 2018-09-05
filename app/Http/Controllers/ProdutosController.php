@@ -24,5 +24,20 @@ class ProdutosController extends Controller
         return view('produtos.create');
     }
 
+    public function store(Request $request){
+
+        $produto = new Produtos();
+        $produto->nome = $request->input('nome');
+        $produto->preco = $request->input('preco');
+        $produto->quantidade = $request->input('quantidade');
+
+        if($produto->save()){
+            return redirect('produtos/create');
+
+            //return view('produtos.create');
+        }
+
+    }
+
 
 }
