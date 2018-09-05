@@ -39,5 +39,11 @@ class ProdutosController extends Controller
 
     }
 
+    public function destroy($id){
+        $produto = Produtos::find($id);
+        $produto->delete();
+        return redirect()->back()->with('success', 'Produto Excluido com Sucesso!');
+    }
+
 
 }

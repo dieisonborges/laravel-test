@@ -1,65 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Novo Produto</title>
-</head>
-<body>
-	<h1>Novo Produto</h1>
-	
+@extends('layouts.app')
+@section('title','Produtos')
+@section('content')
+
+<div class="col-md-12">
+	<div class="box box-success">
+
 	<form method="POST" action="{{url('produtos/')}}">
 		@csrf
-		<label>Nome</label>
-		<input type="text" name="nome">
-		<label>Preço</label>
-		<input type="text" name="preco">
-		<label>Quantidade</label>
-		<input type="number" name="quantidade">
+		<div class="form-group col-md-12">
+			<label >Nome</label>
+			<input type="text" name="nome" class="form-control">
+			<label>Preço</label>
+			<input type="text" name="preco" class="form-control">
+			<label>Quantidade</label>
+			<input type="number" name="quantidade" class="form-control">
 
-		<input type="submit" value="Enviar">
+			<input type="submit" value="Enviar" class="btn btn-warning">
+		</div>
 	</form>
 
 	
 <br><br>
 
-	<a href="{{url('/produtos/')}}" class="myButton">Produtos Voltar</a>
+	<a href="{{url('/produtos/')}}" class="btn btn-success">Produtos Voltar</a>
+
+	</div>			
+</div>
 
 
-
-
-
-
-
-<style type="text/css">
-.myButton {
-	background-color:#44c767;
-	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:28px;
-	border:1px solid #18ab29;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
-}
-.myButton:hover {
-	background-color:#5cbf2a;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}	
-
-</style>
-
-
-        
-
-
-
-
-</body>
-</html>
+@endsection
